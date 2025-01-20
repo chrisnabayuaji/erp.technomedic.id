@@ -50,7 +50,7 @@
     </div>
     <div class="border-dotted"></div>
     <div class="row mt-2">
-      <div class="col-9 offset-3">
+      <div class="col-8 offset-4">
         <button type="submit" class="btn btn-primary" onclick="_save(event)"><i class="fas fa-save me-2"></i> Simpan</button>
         <button type="button" class="btn btn-default" data-bs-dismiss="modal"><i class="fas fa-times me-2"></i> Batal</button>
       </div>
