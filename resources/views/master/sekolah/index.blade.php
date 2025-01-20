@@ -33,6 +33,7 @@
                         <th width="5%">No</th>
                         <th width="7%">Aksi</th>
                         <th width="7%">Id</th>
+                        <th width="80">Logo</th>
                         <th>Sekolah</th>
                         <th>Provinsi</th>
                         <th>Kabupaten/Kota</th>

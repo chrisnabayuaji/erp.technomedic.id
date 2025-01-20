@@ -65,6 +65,18 @@
           }
         },
         {
+          "data": "logo",
+          "className": "text-left",
+          "render": function(data, type, row, meta) {
+            var data = ifNull(data);
+            var result = "";
+            if (data != '' && data != null) {
+              result += '<img src="' + data + '" alt="logo" class="img-thumbnail" width="25">';
+            }
+            return result;
+          }
+        },
+        {
           "data": "sekolah_nm",
           "className": "text-left",
           "render": function(data, type, row, meta) {
