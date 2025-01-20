@@ -10,6 +10,7 @@ use App\Http\Controllers\Master\JabatanController;
 use App\Http\Controllers\Master\DivisiController;
 use App\Http\Controllers\Master\PendidikanController;
 use App\Http\Controllers\Master\SekolahController;
+use App\Http\Controllers\Master\JenisKehadiranController;
 use App\Http\Middleware\AuthMiddleware;
 
 Route::redirect('/', '/auth/login');
@@ -63,13 +64,21 @@ Route::middleware([AuthMiddleware::class])->group(function () {
   Route::delete('/master/pendidikan/delete/{id}', [PendidikanController::class, 'delete']);
   // - End Pendidikan -
 
-    // - Start Sekolah -
-    Route::get('/master/sekolah', [SekolahController::class, 'index']);
-    Route::get('/master/sekolah/form-modal/{id?}', [SekolahController::class, 'formModal']);
-    Route::post('/master/sekolah/ajax-datatables', [SekolahController::class, 'ajaxDatatables']);
-    Route::post('/master/sekolah/save/{id?}', [SekolahController::class, 'save']);
-    Route::delete('/master/sekolah/delete/{id}', [SekolahController::class, 'delete']);
-    // - End Sekolah -
+  // - Start Sekolah -
+  Route::get('/master/sekolah', [SekolahController::class, 'index']);
+  Route::get('/master/sekolah/form-modal/{id?}', [SekolahController::class, 'formModal']);
+  Route::post('/master/sekolah/ajax-datatables', [SekolahController::class, 'ajaxDatatables']);
+  Route::post('/master/sekolah/save/{id?}', [SekolahController::class, 'save']);
+  Route::delete('/master/sekolah/delete/{id}', [SekolahController::class, 'delete']);
+  // - End Sekolah -
+
+  // - Start Jenis Kehadiran -
+  Route::get('/master/jenis_kehadiran', [JenisKehadiranController::class, 'index']);
+  Route::get('/master/jenis_kehadiran/form-modal/{id?}', [JenisKehadiranController::class, 'formModal']);
+  Route::post('/master/jenis_kehadiran/ajax-datatables', [JenisKehadiranController::class, 'ajaxDatatables']);
+  Route::post('/master/jenis_kehadiran/save/{id?}', [JenisKehadiranController::class, 'save']);
+  Route::delete('/master/jenis_kehadiran/delete/{id}', [JenisKehadiranController::class, 'delete']);
+  // - End Jenis Kehadiran -
   // #################### Master ####################
 
 
